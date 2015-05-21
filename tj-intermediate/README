@@ -1,0 +1,36 @@
+Level 1
+
+Silence. The room feels large, but empty. Luckily you have a map of this tower to help find the stairs.
+
+Tip: Use `warrior.directionOfStairs()` to determine which direction stairs are located. Pass this to `warrior.walk()` to walk in that direction.
+
+
+ ------
+|      |
+|@     |
+|      |
+|  >   |
+ ------
+
+
+  > = Stairs
+  @ = TJ (20 HP)
+
+
+Warrior Abilities:
+
+  Actions:
+  
+    warrior.walk()
+      Move in the given direction (forward by default).
+  
+  Senses:
+  
+    warrior.feel()
+      Returns a Space for the given direction (forward by default).
+  
+    warrior.directionOfStairs()
+      Returns the direction ('left', 'right', 'forward', 'backward') the stairs are from your location.
+  
+
+When you're done editing Player.js, run the warriorjs command again.
