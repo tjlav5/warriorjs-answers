@@ -1,30 +1,53 @@
-Level 1
+Level 4
 
-Silence. The room feels large, but empty. Luckily you have a map of this tower to help find the stairs.
+Your ears become more in tune with the surroundings. Listen to find enemies and captives!
 
-Tip: Use `warrior.directionOfStairs()` to determine which direction stairs are located. Pass this to `warrior.walk()` to walk in that direction.
+Tip: Use `warrior.listen()` to find spaces with other units, and warrior.direction_of to determine what direction they're in.
 
 
- ------
-|      |
-|@     |
-|      |
-|  >   |
- ------
+ ----
+|C s |
+| @ S|
+|C s>|
+ ----
 
 
   > = Stairs
   @ = TJ (20 HP)
+  C = Captive (1 HP)
+  s = Sludge (12 HP)
+  S = Thick Sludge (24 HP)
 
 
 Warrior Abilities:
 
   Actions:
   
+    warrior.rescue()
+      Rescue a captive from his chains (earning 20 points) in given direction (forward by default).
+  
+    warrior.bind()
+      Binds a unit in given direction to keep him from moving (forward by default).
+  
+    warrior.attack()
+      Attacks a unit in given direction (forward by default).
+  
+    warrior.rest()
+      Gain 10% of max health back, but do nothing more.
+  
     warrior.walk()
       Move in the given direction (forward by default).
   
   Senses:
+  
+    warrior.listen()
+      Returns an array of all spaces which have units in them.
+  
+    warrior.directionOf()
+      Pass a Space as an argument, and the direction ('left', 'right', 'forward', 'backward') to that space will be returned.
+  
+    warrior.health()
+      Returns an integer representing your health.
   
     warrior.feel()
       Returns a Space for the given direction (forward by default).
